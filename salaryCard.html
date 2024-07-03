@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task | CSS </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .centerElement {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        .parent {
+            width: 550px;
+            height: 320px;
+            margin: 50px auto;
+        }
+
+        .firstPrice , 
+        .secondPrice {
+            position: relative;
+            width: 270px;
+            height: 300px;
+            background-color: #eee;
+            margin: 20px;
+        }
+
+        .firstPrice p,
+        .secondPrice p {
+            background-color: #03A9F4;
+            color: white;
+            text-align: center;
+
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .firstPrice div ,
+        .secondPrice div {
+            background-color: #ccc;
+            margin: 50px;
+            border-radius: 50%;
+
+            width: 150px;
+            height: 150px;
+        }
+        
+        .firstPrice::after {
+            content: 'or';
+            
+            position: absolute;
+            top: 50%;
+            right: -14%;
+
+            background-color: #03A9F4;
+            border-radius: 50%;
+            color: white;
+            padding: 5px;
+        }
+        
+        .firstPrice::before{
+            content: '';
+            height: 100%;
+            width: 2px;
+            background-color: #03A9F4;
+
+            position: absolute;
+            top: 0;
+            right: -8%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent centerElement">
+
+        <div class="firstPrice"> 
+            <p> basic </p>
+            <div class="centerElement"> free </div>
+        </div>
+
+        <div class="secondPrice">
+            <p> pro </p>
+            <div class="centerElement"> $30 </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
